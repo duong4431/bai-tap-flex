@@ -24,6 +24,14 @@
     border-radius:50%;
     background:white;
     position:absolute;
-    left:2px;
+    right:2px;
     top:2px;
+    box-shadow:-1px 1px 5px rgba(0,0,0,0.3);
+}
+.ISwitch>input[type=checkbox]:checked + span{
+    background:rgba(0,0,0,0.2);    
+}
+.ISwitch>input[type=checkbox]:checked + span>span{
+    right:auto;
+    left:2px;    
 }
