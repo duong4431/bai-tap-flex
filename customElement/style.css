@@ -48,7 +48,7 @@ h1{
 .tab{
     width:500px;
     height:250px;
-    background:rgba(0,0,0,0.3);    
+    background:rgba(0,0,0,0.2);    
     position:relative;
     padding:45px 15px 10px 15px;
 }
@@ -59,7 +59,7 @@ h1{
     height:35px;
     left:0;
     top:0;
-    background:rgba(0,0,0,0.6);
+    background:rgba(0,0,0,0.5);
     z-index:-1;        
 }
 .tab > input[type=radio],.tab > div{
@@ -83,51 +83,20 @@ h1{
 }
 .tab > label:nth-child(6)
 {
-    left:64px;
+    left:63px;
     top:0;
 }
 .tab > label:nth-child(9)
 {
-    left:123px;
+    left:121px;
     top:0;
 }
 .tab > label:hover{
-    background:rgba(0,0,0,0.7);    
+    background:rgba(0,0,0,0.4);    
 }
 .tab > input[type=radio]:checked + div + label{
-    background:rgba(0,0,0,0.7);    
+    background:rgba(0,0,0,0.4);    
 }
 .tab > input[type=radio]:checked + div{
     display:block;
 }
-/* .tab > .tab-header{    
-    background:rgba(0,0,0,0.6);        
-}
-.tab > .tab-header::after{
-    content:' ';
-    display:block;
-    clear: both;
-}
-.tab > .tab-content{ 
-    padding:10px 15px;
-}
-.tab-header > label{        
-    height:35px;
-    line-height:35px;
-    color:white;    
-    padding:0 15px;
-    cursor: pointer;
-    float:left;
-}
-.tab-header > label:hover{
-    background:rgba(0,0,0,0.7);
-}
-.tab-header > label:visited{
-    background:red;
-}
-.tab-content > input[type=radio],.tab-content > div{
-    display:none;
-}
-.tab-content > input[type=radio]:checked + div{
-    display:block;
-} */
