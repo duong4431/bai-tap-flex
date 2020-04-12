@@ -100,3 +100,32 @@ h1{
 .tab > input[type=radio]:checked + div{
     display:block;
 }
+/* Custom button */
+.btn-type1{
+    display: flex;    
+    background: white;
+    border: none;
+    box-shadow: 1px 1px 6px rgba(0,0,0,0.2);        
+    /* height: 35px; */
+    border-radius:2px;
+    cursor: pointer;
+}
+.btn-type1:hover{
+    background:#e5e5e5;
+}
+.btn-type1 > span:first-child{    
+    width: 30px;
+    height:35px;
+    background:#FF6527;
+    flex-grow: 1;
+    border-radius:2px 0 0 2px;
+}
+.btn-type1 > span:last-child{
+    flex-grow: 2;
+    display:flex;
+    flex-direction: column;   
+    padding:10px; 
+}
+.btn-type1 >span:last-child > span{
+    font-size:11px;
+}
