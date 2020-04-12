@@ -3,14 +3,18 @@
     padding:0px;
     box-sizing: border-box;
 }
+h1{
+    margin:10px 0px;
+}
 #custom{
     width:1000px;
-    margin:100px auto;
+    margin:30px auto;
 }
-.ISwitch>input[type=checkbox]{
+/* Switches iphone */
+.ISwitch > input[type=checkbox]{
     display:none;
 }
-.ISwitch>span{
+.ISwitch > span{
     display:inline-block;
     width:60px;
     height:35px;
@@ -18,7 +22,7 @@
     border-radius:20px;
     position:relative;
 }
-.ISwitch>span>span{
+.ISwitch > span > span{
     width: 31px;
     height:31px;
     border-radius:50%;
@@ -26,12 +30,44 @@
     position:absolute;
     right:2px;
     top:2px;
-    box-shadow:-1px 1px 5px rgba(0,0,0,0.3);
+    box-shadow:-1px 2px 5px rgba(0,0,0,0.3);
 }
-.ISwitch>input[type=checkbox]:checked + span{
+.ISwitch > input[type=checkbox]:checked + span{
     background:rgba(0,0,0,0.2);    
 }
-.ISwitch>input[type=checkbox]:checked + span>span{
+.ISwitch > input[type=checkbox]:checked + span>span{
     right:auto;
     left:2px;    
+    box-shadow:1px 2px 5px rgba(0,0,0,0.3);
+}
+/* Custom tab */
+.tab{
+    width:500px;
+    height:250px;
+    background:rgba(0,0,0,0.3);
+}
+.tab > .tab-header{    
+    background:rgba(0,0,0,0.6);        
+}
+.tab > .tab-header::after{
+    content:' ';
+    display:block;
+    clear: both;
+}
+.tab > .tab-content{
+    padding:5px 15px;
+}
+.tab-header > label{        
+    height:35px;
+    line-height:35px;
+    color:white;    
+    padding:0 15px;
+    cursor: pointer;
+    float:left;
+}
+.tab-header > label:hover{
+    background:rgba(0,0,0,0.7);
+}
+.tab-content > input[type=radio],.tab-content > div{
+    display:none;
 }
