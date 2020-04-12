@@ -50,8 +50,7 @@ h1{
     width:500px;
     height:250px;
     background:rgba(0,0,0,0.2);    
-    position:relative;
-    padding:45px 15px 10px 15px;
+    position:relative;    
 }
 .tab::after{
     content:' ';    
@@ -63,42 +62,29 @@ h1{
     background:rgba(0,0,0,0.5);
     z-index:-1;        
 }
-.tab > input[type=radio],.tab > div{
+.tab > .tab-content{clear:both;padding: 10px;}
+.tab > input[type=radio],.tab > .tab-content > div{
     display:none;    
 }
 .tab > label{        
-    display:inline-block;    
+    display:block;    
     height:35px;
     line-height:35px;
     cursor:pointer;    
     padding:0 15px;
     color:white;    
-    position:absolute;
-    left:0;
-    top:0;
-}
-.tab > label:nth-child(3)
-{
-    left:0px;
-    top:0;
-}
-.tab > label:nth-child(6)
-{
-    left:63px;
-    top:0;
-}
-.tab > label:nth-child(9)
-{
-    left:121px;
-    top:0;
+    float:left;
 }
 .tab > label:hover{
     background:rgba(0,0,0,0.4);    
 }
-.tab > input[type=radio]:checked + div + label{
+.tab > input[type=radio]:checked + label{
     background:rgba(0,0,0,0.4);    
 }
-.tab > input[type=radio]:checked + div{
+#tab1:checked ~ .tab-content > div:nth-of-type(1),
+#tab2:checked ~ .tab-content > div:nth-of-type(2),
+#tab3:checked ~ .tab-content > div:nth-of-type(3)
+{
     display:block;
 }
 /* Custom button */
