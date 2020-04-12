@@ -2,6 +2,7 @@
     margin:0px;
     padding:0px;
     box-sizing: border-box;
+    outline: none;
 }
 body{
     font-family: Arial, Helvetica, sans-serif;
@@ -10,7 +11,7 @@ h1{
     margin:10px 0px;
 }
 #custom{
-    width:1000px;
+    width:600px;
     margin:30px auto;
 }
 /* Switches iphone */
@@ -83,12 +84,12 @@ h1{
 }
 .tab > label:nth-child(6)
 {
-    left:63px;
+    left:62px;
     top:0;
 }
 .tab > label:nth-child(9)
 {
-    left:121px;
+    left:119px;
     top:0;
 }
 .tab > label:hover{
@@ -106,26 +107,63 @@ h1{
     background: white;
     border: none;
     box-shadow: 1px 1px 6px rgba(0,0,0,0.2);        
-    /* height: 35px; */
+    padding:10px 20px 10px 60px;
     border-radius:2px;
     cursor: pointer;
+    flex-direction: column;
+    position:relative;
 }
-.btn-type1:hover{
-    background:#e5e5e5;
-}
-.btn-type1 > span:first-child{    
-    width: 30px;
-    height:35px;
-    background:#FF6527;
-    flex-grow: 1;
+.btn-type1::before{
+    content:' ';
+    position:absolute;
+    width:45px;
+    height:100%;
+    background:url(images/person-icon.png) no-repeat center center rgba(255, 101, 39,1);
+    background-size: 32px;
+    left:0;
+    top:0;
     border-radius:2px 0 0 2px;
 }
-.btn-type1 > span:last-child{
-    flex-grow: 2;
-    display:flex;
-    flex-direction: column;   
-    padding:10px; 
+.btn-type1:hover{
+    background:#efefef;
 }
-.btn-type1 >span:last-child > span{
+.btn-type1 span:first-child{
+    font-weight: bold;
+    opacity: 0.8;
+}
+.btn-type1 span:last-child{
     font-size:11px;
+    opacity: 0.8;
+    line-height: 18px;
+}
+/* button type 2 */
+.btn-type2{    
+    border:none;    
+    color:white;
+    font-weight:bold;
+    padding:0 55px 0 20px;    
+    height:45px;
+    border-radius:30px;
+    position:relative;   
+    font-size:16px; 
+}
+.btn-type2:hover{
+    cursor: pointer;    
+}
+.btn-type2::before{
+    content:' ';    
+    width:39px;
+    height:39px;
+    border-radius:50%;
+    background:url(images/lt-icon.png) no-repeat center center rgba(255,255,255, 0.3);
+    background-size:16px;
+    position:absolute;
+    right:3px;
+    top:3px;    
+}
+.btn-default{
+    background:rgba(12,167,213,1);
+}
+.btn-submit{
+    background:rgba(255, 121, 35,1);
 }
