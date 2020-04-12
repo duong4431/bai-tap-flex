@@ -1,0 +1,29 @@
+*{
+    margin:0px;
+    padding:0px;
+    box-sizing: border-box;
+}
+#custom{
+    width:1000px;
+    margin:100px auto;
+}
+.ISwitch>input[type=checkbox]{
+    display:none;
+}
+.ISwitch>span{
+    display:inline-block;
+    width:60px;
+    height:35px;
+    background:#4AD361;
+    border-radius:20px;
+    position:relative;
+}
+.ISwitch>span>span{
+    width: 31px;
+    height:31px;
+    border-radius:50%;
+    background:white;
+    position:absolute;
+    left:2px;
+    top:2px;
+}
