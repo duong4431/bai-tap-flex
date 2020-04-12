@@ -3,6 +3,9 @@
     padding:0px;
     box-sizing: border-box;
 }
+body{
+    font-family: Arial, Helvetica, sans-serif;
+}
 h1{
     margin:10px 0px;
 }
@@ -21,6 +24,7 @@ h1{
     background:#4AD361;
     border-radius:20px;
     position:relative;
+    cursor: pointer;
 }
 .ISwitch > span > span{
     width: 31px;
@@ -54,8 +58,8 @@ h1{
     display:block;
     clear: both;
 }
-.tab > .tab-content{
-    padding:5px 15px;
+.tab > .tab-content{ 
+    padding:10px 15px;
 }
 .tab-header > label{        
     height:35px;
@@ -68,6 +72,15 @@ h1{
 .tab-header > label:hover{
     background:rgba(0,0,0,0.7);
 }
+.tab-header > label:visited{
+    background:red;
+}
 .tab-content > input[type=radio],.tab-content > div{
     display:none;
 }
+.tab-content > input[type=radio]:checked + div{
+    display:block;
+}
+/* .tab-content > input[type=radio]:checked ~ label{
+    background:red;
+} */
