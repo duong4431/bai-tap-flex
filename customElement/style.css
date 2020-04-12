@@ -84,12 +84,12 @@ h1{
 }
 .tab > label:nth-child(6)
 {
-    left:62px;
+    left:63px;
     top:0;
 }
 .tab > label:nth-child(9)
 {
-    left:119px;
+    left:121px;
     top:0;
 }
 .tab > label:hover{
@@ -148,7 +148,8 @@ h1{
     font-size:16px; 
 }
 .btn-type2:hover{
-    cursor: pointer;    
+    cursor: pointer;  
+    opacity: 0.8;     
 }
 .btn-type2::before{
     content:' ';    
@@ -166,4 +167,31 @@ h1{
 }
 .btn-submit{
     background:rgba(255, 121, 35,1);
+}
+
+/* button type 3 */
+.btn-type3{    
+    border:2px solid rgba(0,0,0,0.4);  
+    background:rgba(0,0,0,0.6);  
+    color:white;
+    font-weight:bold;
+    padding:0 20px 0 55px;    
+    height:45px;
+    border-radius:30px;
+    position:relative;   
+    font-size:16px; 
+}
+.btn-type3:hover{
+    cursor: pointer;  
+    opacity: 0.8;     
+}
+.btn-type3::after{
+    content:' '; 
+    width:39px;
+    height:39px;       
+    background:url(images/lt-icon.png) no-repeat center center;
+    background-size:16px;
+    position:absolute;
+    left:3px;
+    top:1px;    
 }
