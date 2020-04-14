@@ -1,0 +1,127 @@
+/* reset css */
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    outline: none;
+    text-decoration: none;
+    list-style:none;
+}
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 13px;
+}
+.widget{
+    width:980px;
+    margin:50px auto;
+}
+.widget-header {
+    border-bottom:1px solid #00ACC1;
+}
+.widget-header > h3 {
+    display:inline-block;
+    background:#00ACC1;      
+    height:30px;
+    line-height:30px;
+    color:white;
+    padding:0 10px;
+    font-weight: normal;
+}
+.widget > ul{
+    display:flex;
+    flex-wrap: wrap;        
+}
+.widget > ul > li{
+    flex-basis: 25%;        
+}
+.widget > ul > li > a{
+    display:inline-block;
+    width:100%;
+    height:42px;
+    line-height:42px;
+    color:#000;
+    background:url(images/ic_cate_small.png) no-repeat 0px 0px;    
+    text-indent: 30px;
+    position:relative;
+}
+.widget > ul > li:hover > a{
+    color:#00ACC1;    
+    font-weight: 600;
+}
+.widget > ul > li:nth-child(1) > a{
+    background-position: 0px -3182px;
+}
+.widget > ul > li:nth-child(2) > a{
+    background-position: 0px -2225px;
+}
+.widget > ul > li:nth-child(3) > a{
+    background-position: 0px -2055px;
+}
+.widget > ul > li:nth-child(4) > a{
+    background-position: 0px -1240px;
+}
+.widget > ul > li:nth-child(5) > a{
+    background-position: 0px -1135px;
+}
+.widget > ul > li:nth-child(6) > a{
+    background-position: 0px -2305px;
+}
+.widget > ul > li:nth-child(7) > a{
+    background-position: 0px -2225px;
+}
+.widget > ul > li:nth-child(8) > a{
+    background-position: 0px -2095px;
+}
+.widget > ul > li:nth-child(9) > a{
+    background-position: 0px -3005px;
+}
+.widget > ul > li:nth-child(10) > a{
+    background-position: 0px -2383px;
+}
+.widget > ul > li:nth-child(11) > a{
+    background-position: 0px -258px;
+}
+.widget > ul > li:nth-child(12) > a{
+    background-position: 0px -2138px;
+}
+.widget > ul > li:nth-child(13) > a{
+    background-position: 0px -2886px;
+}
+.widget > ul > li:nth-child(14) > a{
+    background-position: 0px -777px;
+}
+.widget > ul > li:nth-child(15) > a{
+    background-position: 0px -3048px;
+}
+.widget > ul > li:nth-child(16) > a{
+    background-position: 0px -3094px;
+}
+.widget > ul > li:nth-child(17) > a{
+    background-position: 0px -2262px;
+}
+.widget > ul > li:nth-child(18) > a{
+    background-position: 0px -3139px;
+}
+.widget > ul > li:nth-child(19) > a{
+    background-position: 0px -777px;
+}
+.widget > ul > li > a > span{
+    float:left;    
+}
+.widget > ul > li > a > span:last-child{
+    width:52px;
+    height:42px;
+    margin-left:5px;
+    background:url(images/ic_cate_small.png) no-repeat 0px 0px;
+}
+.widget > ul > li > a::after{
+    content:' ';
+    display: block;
+    clear: both;
+}
+.hot{                
+    background-position: 0px -3220px !important; 
+}
+.new{
+    background-position: 0px -3252px !important; 
+}
