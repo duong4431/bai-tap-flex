@@ -156,6 +156,10 @@ header > .container > .top-menu > li > a.active-menu{
 }
 
 /* ablut */
+.about {
+    padding-bottom:100px;
+    border-bottom:1px solid #dde1e4;
+}
 .about > .container > div{
     display:flex;
     margin-top:58px;
@@ -233,3 +237,198 @@ header > .container > .top-menu > li > a.active-menu{
     line-height:42px;
     margin-bottom:3px;
 }
+/* team */
+.team > .container > h2{
+    margin-bottom:52px;
+}
+.team > .container > div {
+    display:flex;    
+    justify-content: space-between;        
+}
+.team > .container > div > div > ul{
+    display:none;
+}
+.team > .container > div > div{
+    flex-basis: 262px;
+    height:375px;
+}
+.team > .container > div > div{
+    position:relative;
+}
+.team > .container > div > div::after{
+    content:' ';
+    position:absolute;
+    display:block;
+    clear: both;
+}
+.team > .container > div img{
+    display:block;
+    width: 262px;
+    height:301px;
+}
+.team > .container > div ul{
+    display:block;
+    position:absolute;
+    left:55px;
+    top:125.5px;
+}
+.team > .container > div ul li{
+    display:block;
+    float:left;
+    margin-left:1px;
+}
+.team > .container > div ul li:first-child{
+    margin-left:0px;
+}
+.team > .container > div ul li a{
+    display:inline-block;
+    width: 50px;
+    height:50px;
+    line-height:50px;    
+    text-indent: -1000000px;    
+    background-size:20px !important;
+}
+.team > .container > div ul li:nth-child(1) a
+{
+    background:url(images/social-icons.png) no-repeat 15px 0px #3a454d;    
+}
+.team > .container > div ul li:nth-child(2) a
+{
+    background:url(images/social-icons.png) no-repeat 18px -49px #3a454d;
+}
+.team > .container > div ul li:nth-child(3) a
+{
+    background:url(images/social-icons.png) no-repeat 17px -100px #3a454d;
+}
+.team > .container > div > div > div{
+    height:74px;
+    background:#e1e6ea;
+    padding:11.5px 0 0 21px;
+}
+.team > .container > div > div > div > h3{
+    color:#292f36;
+    font-size:16px;
+    line-height:35px;    
+}
+.team > .container > div > div > div > p{
+    font-size:14px;
+    line-height:26px;
+    margin-top:-6.5px;
+    color:#8d8f92;
+}
+.team > .container > div > div:hover > div{
+    background:#3a454d;
+}
+.team > .container > div > div:hover > div > h3{    
+    color:#cacdd0;
+}
+.team > .container > div > div:hover > div > p{
+    color:#cacdd0;
+}
+.team > .container > div > div:hover ul{
+    display: block;;
+}
+.team > .container > div > div:hover img{
+    background:white;
+    opacity: 0.4;
+}
+.team > .container > div ul li a:hover{
+    background-color:#4e5a62;
+}
+/* lovely work */
+.lovelywork > .container > div{
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: space-between; 
+    margin-top:64px;       
+}
+.lovelywork > .container > div > div{  
+    flex-basis: 360px;
+    height: 265px;
+    margin:0px 30px 30px 0px;    
+    position:relative;
+}
+.lovelywork > .container > div > div::after{
+    content:' ';
+    background:#292f36;
+    opacity: 0.5;
+    width:360px;
+    height:204px;
+    position:absolute;
+    left:0;
+    top:0;
+    display:none;
+}
+.lovelywork > .container > div > div:nth-child(3n)
+{
+    margin-right:0px;
+}
+.lovelywork > .container > div > div > h3{
+    position:absolute;
+    left:0;
+    bottom:0;
+    width:100%;
+    font-size:18px;
+    line-height:61px;
+    padding-left:20px;        
+    background:#292f36; 
+    color:white;  
+    display:none;          
+}
+/* .lovelywork > .container > div > div > div{
+    position:absolute;
+    left:0;
+    top:0;
+    opacity: 0.5;
+    width: 360px;
+    height: 204px;    
+    background:#292f36;
+    display:none;    
+} */
+.lovelywork > .container > div > div > a::before{    
+    content:'\002B';
+    color:white;
+    font-size:40px;
+    position:absolute;
+    left:0;
+    top:0;    
+    width:360px;
+    height:204px;
+    display:flex;    
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+}
+.lovelywork > .container > div > div > a::after{
+    background:#292f36;
+    opacity: 0;
+    content:'\002B';
+    color:white;
+    font-size:40px;
+    position:absolute;
+    left:0;
+    top:0;    
+    width:360px;
+    height:204px;
+    display:flex;    
+    justify-content: center;
+    align-items: center;
+}
+.lovelywork > .container > div img{
+    display:inline-block;
+    width:360px;
+    height:265px;    
+}
+.lovelywork > .container > div > div:hover > a::before
+{
+    opacity: 1;
+}
+.lovelywork > .container > div > div:hover > a::after
+{
+    opacity: 0.5;
+}
+.lovelywork > .container > div > div:hover > div,
+.lovelywork > .container > div > div:hover > h3
+{
+    display:block;    
+} 
