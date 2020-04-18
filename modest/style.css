@@ -179,9 +179,21 @@ header > .container > .top-menu > li > a.active-menu{
 }
 .about > .container ul{
     margin-top:50px;
+    position:absolute;
+}
+.about > .container ul::after{
+    content:' ';
+    position:absolute;
+    display:block;
+    clear: both;
 }
 .about > .container ul li{
-    display:inline-block;
+    /* display:inline-block; */
+    float:left;
+    margin-left:1px;
+}
+.about > .container ul li:first-child{
+    margin-left:0px;
 }
 .about > .container ul li a{
     display:inline-block;
