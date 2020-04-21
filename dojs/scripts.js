@@ -1,9 +1,22 @@
 // ---------------------Định nghĩa hàm----------------------
 ///Kiểm tra tên có chứa ký tự nào đó không
+///Cách 1 dùng indexOf
 function isExitsChar(str,ch)
 {
     var arr = str.split(' ');
     return arr[arr.length - 1].indexOf(ch) != -1;
+}
+///Cách 2 chỉ dùng split
+function isExitsChar_v1(str,ch)
+{
+    var arr = str.split(' ');
+    return arr[arr.length - 1].split(ch).length > 1;
+}
+///Cách 3 dùng replace
+function isExitsChar_v2(str,ch)
+{
+    var arr = str.split(' ');    
+    return arr[arr.length - 1].replace(ch,'abcde').length > arr[arr.length - 1].length;
 }
 ///Hàm hỗ trợ bài tập 4
 ///Tác dụng: để sử dụng với nhiều mảng tránh viết lại code
@@ -38,7 +51,7 @@ function bai3()
     console.log('+ Bài tập 3');
     var listName = ['nguyen van tung','tao van Nguyen','Tran manh Nam','Nguyen dinh Duc'];
     console.log('Mảng tên người: ',listName);
-    var newlistName = listName.filter(name=>isExitsChar(name,'N'));    
+    var newlistName = listName.filter(name=>isExitsChar_v2(name,'N'));    
     console.log('Số người có chữ N trong tên là: ' + newlistName.length, newlistName);
     console.log('-----------------------------------------');
 }
@@ -88,6 +101,3 @@ bai4();
 bai5();
 bai5_v1();
 chaoHoi('Em xin hết. Em cảm ơn Thầy!')
-
-var abc = [1,-2,3,-4,5,4.5,6.4];
-console.log(abc.sort());
