@@ -52,14 +52,29 @@ function bai4()
 }
 function bai5()
 {
-    console.log('+ Bài tập 5');
-    var listHeight = [150, 160, 155, 165, 170, 164, 140, 180, 172];
-    console.log('Số bạn mặc áo size S: ');
-    console.log(listHeight.filter(h => h < 165).length);
-    console.log('Số bạn mặc áo size M: ');
-    console.log(listHeight.filter(h => h >= 165 && h <= 170 ).length);
-    console.log('Số bạn mặc áo size L: ');
-    console.log(listHeight.filter(h => h > 170).length);
+    console.log('+ Bài tập 5 cách 1');
+    var listHeight = [150, 160, 155, 165, 170, 164, 140, 180, 172];        
+    console.log('Số bạn mặc áo size S: ' + listHeight.filter(height => height < 165).length);    
+    console.log('Số bạn mặc áo size M: ' + listHeight.filter(height => height >= 165 && height <= 170 ).length);    
+    console.log('Số bạn mặc áo size L: ' + listHeight.filter(height => height > 170).length);    
+    console.log('-----------------------------------------');
+}
+function bai5_v1()
+{
+    console.log('+ Bài tập 5 cách 2');
+    var listHeight = [150, 160, 155, 165, 170, 164, 140, 180, 172]; 
+    var size = {s:0, m:0, l:0};       
+    listHeight.forEach((height) => {
+        if(height < 165)
+            size.s++;
+        else if(height >= 165 && height <=170)
+            size.m++;
+        else
+            size.l++;
+    });
+    console.log('Số bạn mặc áo size S: ' + size.s);    
+    console.log('Số bạn mặc áo size M: ' + size.m);    
+    console.log('Số bạn mặc áo size L: ' + size.l);
     console.log('-----------------------------------------');
 }
 function chaoHoi(str){
@@ -71,4 +86,5 @@ bai2();
 bai3();
 bai4();
 bai5();
+bai5_v1();
 chaoHoi('Em xin hết. Em cảm ơn Thầy!')
