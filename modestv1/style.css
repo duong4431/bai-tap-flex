@@ -541,15 +541,112 @@ header ul li a.active{
     margin-bottom:95px;
 }
 .contactForm{
-    max-width:555px;
+    width:555px;
     position:absolute;
     right:0;
     bottom:0;
+    padding:24px 30px;
+    background:white;
+}
+.contactForm > div:first-child::after{
+    content:' ';
+    display:block;
+    clear:both;
 }
 .contactForm > div > div{
     float:left;
+    width:calc((100% - 15px) / 2);
+    margin:0px 0px 24px 15px;
+}
+.contactForm > div > div:first-child{
+    margin-left:0px;
 }
 .contactForm label{
     color:#8d8f92;
     text-transform: uppercase;
+    display:block;   
+    margin:0px 0px 10px 8px; 
+}
+.contactForm input,.contactForm textarea{
+    border:none;
+    width:100%;
+    background:#eaeef1;
+    border-radius:3px;
+    padding-left:10px;
+    font-size:18px;
+    color:rgba(0,0,0,0.6);
+}
+.contactForm input{
+    height:45px;    
+}
+.contactForm textarea{
+    resize: none;
+    padding-top:10px;
+    height:158px;
+}
+.contactForm button{
+    background:#23b7a4;
+    border:none;
+    text-transform: uppercase;
+    color:white;
+    height:44px;
+    line-height: 46px;
+    padding:0px 26px;
+    margin-top:30px;
+    border-radius:5px;
+    cursor: pointer;
+}
+.contactForm button:hover{
+    background:#1fa593;
+}
+/* footer */
+footer{
+    background:#3a454d;
+    height:95px;    
+}
+footer .container::after{
+    content:' ';
+    display:block;
+    clear:both;
+}
+footer p{
+    color:white;
+    font-size:14px;
+    float:left;
+    display:block;
+    line-height:95px;
+}
+footer ul{
+    float:right; 
+    display:flex;
+    align-items: center;   
+    height:95px;            
+}
+footer ul li{
+    display:inline-block;      
+    margin-left:10px;  
+}
+footer ul li:first-child{
+    margin-left:px;
+}
+footer ul li a{
+    display:inline-block;
+    text-indent: -1000000px;
+    background:url(images/social-icons.png) no-repeat center -12px;
+    width:24px;
+    /* height:24px; */
+    background-size: 19px;    
+}
+footer ul li:nth-child(2) a{
+    background-position:6px -87px;
+}
+footer ul li:nth-child(3) a{
+    background-position:4px -316px;
+}
+footer ul li:nth-child(4) a{
+    background-position:center -266px;
+    background-size:21px;
+}
+footer ul li:nth-child(5) a{
+    background-position:5px -168px;
 }
