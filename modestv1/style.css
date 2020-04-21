@@ -511,7 +511,7 @@ header ul li a.active{
 }
 /* stay in touch */
 .stayin{
-    padding:68px 0px 99px 0px;
+    padding:68px 0px 0px 0px;
     position:relative;    
 }
 .stayin #map{
@@ -545,7 +545,7 @@ header ul li a.active{
     position:absolute;
     right:0;
     bottom:0;
-    padding:24px 30px;
+    padding:24px 30px 0px 30px;
     background:white;
 }
 .contactForm > div:first-child::after{
