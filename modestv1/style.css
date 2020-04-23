@@ -47,7 +47,7 @@ a{
     text-transform: uppercase;
 }
 .container{
-    width:1170px;
+    max-width:1170px;
     margin:0px auto;
     padding:0px 15px;
 }
@@ -102,6 +102,10 @@ header ul li a.active{
     border-color:#23b7a4;
     color:#23b7a4;
 }
+header input[type=checkbox],
+.btn-menu{
+    display:none;
+}
 /* slider */
 .slider{
     max-height:660px;    
@@ -109,11 +113,11 @@ header ul li a.active{
     background-size: cover;    
 }
 .slider .container{
-    padding:225px 0px 250px 0px;    
+    padding:225px 15px 250px 15px;    
     position:relative;
 }
 .slider .container > div{
-    width:654px;
+    max-width:654px;
 }
 .slider h2{
     color:white;
@@ -141,7 +145,7 @@ header ul li a.active{
 }
 .slider ul{
     position:absolute;
-    right:0;
+    right:15px;
     bottom:30px;
 }
 .slider ul li{
@@ -649,4 +653,398 @@ footer ul li:nth-child(4) a{
 }
 footer ul li:nth-child(5) a{
     background-position:5px -168px;
+}
+@media screen and (max-width:960px)
+{
+    header ul li {
+        margin-left: 5px;
+    }
+    .slider .container {
+        padding: 97px 15px 97px 15px;
+    }
+    .slider .container h2{
+        font-size:28px;
+    }
+    .about {
+        padding: 45px 0px 50px 0px;
+    }
+    .about h2 {
+        margin-bottom: 35px;
+    }
+    .about > .container > div > div{
+        width: calc((100% - 30px) / 2);
+        margin-right:30px;
+    }
+    .about > .container > div > div:last-child{
+        margin-right:0px;
+    }
+    .team {
+        margin: 30px 0px 30px 0px;
+    }
+    .team h2 {
+        margin-bottom: 30px;
+    }
+    .lovely-work {        
+        padding: 30px 0px 30px 0px;
+    }
+    .lovely-work h2 {        
+        margin-bottom: 30px;
+    }
+    .lovely-work .btn{
+        margin-top:0px;
+    }
+    .whatwedo h2 {
+        margin: 30px 0px 125px 0px;
+    }
+    #wedo div {     
+        margin: 0px 30px 130px 0px;
+    }
+    #wedo div:nth-child(n + 5) {
+        margin-bottom:40px;
+    }
+    .features {
+        padding: 30px 0px 30px 0px;
+    }
+    .features h2 {        
+        margin-bottom: 30px;
+    }
+    #feature-list > div > h3 {
+        margin: 30px 0px 15px 0px;
+    }
+    .stayin {
+        padding: 30px 0px 0px 0px;
+    }
+    .stayin #map {        
+        top: 101px;
+    }
+    .stayin > .container > div h3 {
+        margin: 405px 0px 20px 0px;
+    }
+    .stayin > .container > div > div > p:last-of-type {
+        margin-bottom: 50px;
+    }
+    .stayin > .container > div > div,
+    .contactForm {
+        max-width: 50%;
+    }
+}
+@media screen and (max-width:786px)
+{
+    #team-list > div > div:last-child {        
+        padding: 10px 0px 0px 10px;
+    }
+}
+@media screen and (max-width:768px)
+{
+    header .container{
+        position:relative;
+    }    
+    header ul {
+        float:none;
+        position:absolute;
+        right:0px;
+        top:81px;
+        width:100%;
+        padding:10px 0px 10px 0px;
+        line-height:30px;
+        background:#1D2126;
+        z-index: 9999;  
+        display:none;      
+    }
+    header ul li{
+        float:none;        
+    }
+    .btn-menu {
+        display: inline-block;
+        width: 50px;
+        height: 50px;
+        background: url(images/other-icons.png) no-repeat center -270px;
+        position: absolute;
+        top: calc(50% - 25px);
+        right: 20px;
+    }
+    header input[type=checkbox]:checked ~ ul
+    {
+        display:block;
+    }
+    header input[type=checkbox]:checked ~ label.btn-menu{
+        background-position: center bottom;
+    }
+    header ul li a.active {
+        border:none;        
+        color: #23b7a4;
+    }
+    h2{
+        font-size:24px;
+    }
+    h3{
+        font-size:16px;
+    }
+    .about {
+        padding: 25px 0px 30px 0px;
+    }
+    .about h2 {
+        margin-bottom: 20px;
+    }
+    .about > .container > div > div:nth-child(2) div p {
+        margin-bottom: 15px;
+    }
+    .team {
+        margin: 25px 0px 25px 0px;
+    }
+    #team-list > div > div:last-child {
+        padding: 10px 0px 0px 8px;
+    }
+    #team-list > div > div:last-child h3 {
+        font-size: 14px;
+    }
+    #team-list > div > div:last-child p {
+        font-size: 13px;
+    }
+    #team-list > div > div:last-child {
+        height: auto;
+    }
+    .whatwedo h2 {
+        margin: 25px 0px 115px 0px;
+    }
+    #wedo > div > h3 {     
+        font-size: 14px;
+    }
+    .features {
+        padding: 25px 0px 25px 0px;
+    }
+    .features h2 {
+        margin-bottom: 25px;
+    }
+    #feature-list > div {        
+        margin: 0px 30px 20px 0px;
+    }
+    .stayin {
+        padding: 25px 0px 0px 0px;
+    }
+    .stayin #map {
+        top: 90px;
+    }
+    .contactForm > div > div {
+        float:none;
+        width: 100%;
+        margin:0;
+    }
+    .contactForm label {        
+        margin: 10px 0px 10px 0px;
+    }
+    .contactForm label:fist-child{
+        margin-top:0px;
+    }    
+}
+@media screen and (max-width:690px)
+{    
+    .slider .container {
+        padding: 60px 15px 20px 15px;
+    }
+    .slider .container > div {        
+        text-align: center;
+    }
+    .slider ul {
+        position: static;
+        right: 15px;
+        bottom: 30px;
+        margin-top: 30px;
+        text-align: center;
+    }
+    .about ul {
+        margin: 20px auto;
+    }
+    .about > .container > div > div:nth-child(1),
+    .about > .container > div > div:nth-child(2)
+    {
+        float:none;
+        width:100%;
+    }
+    .about > .container > div > div:nth-child(2) div {        
+        padding-left: 60px;
+    }
+    #team-list > div {        
+        margin-bottom:30px;
+        width: calc((100% - 30px)/2);
+    }
+    #team-list > div:nth-child(2n)
+    {
+        margin-right:0px;
+    }
+    #wedo div {
+        float: left;
+        width: calc((100% - 30px) / 2);
+    }
+    #wedo div:nth-child(2n)
+    {
+        margin-right:0px;
+    }
+    #wedo div:nth-child(n + 5){
+        margin-bottom:130px;
+    }
+    #wedo div:nth-child(n + 7){
+        margin-bottom:60px
+    }
+    .stayin > .container > div > div, .contactForm {
+        max-width:100%;
+    }
+    .contactForm {
+        width: 100%;
+        position: static;
+        padding:0px; 
+        padding-bottom:25px;       
+    }
+}
+@media screen and (max-width:600px)
+{    
+    #love-list > div {                
+        width: calc((100% - 30px) / 2);                
+    }
+    #love-list > div:nth-child(3n) {
+        margin-right: 30px;
+    }
+    #love-list > div:nth-child(2n)
+    {
+        margin-right:0px;
+    }
+    #feature-list > div {
+        float:none;        
+        width: 100%;
+    }
+    footer {
+        height:auto;
+        text-align:center;
+    }    
+    footer p,footer ul{
+        float: none;
+        line-height: 30px;
+        height:auto;
+    }
+    footer p{        
+        line-height: 50px;        
+    }
+    footer ul {
+        display: inline-block;
+        width: 100%;
+    }
+}
+@media screen and (max-width:500px)
+{
+    #team-list > div,
+    #love-list > div
+    {
+        width:100%;
+    }    
+    #wedo div:nth-child(n + 7)
+    {
+        margin-bottom:auto;
+    }
+    #wedo div 
+    {
+        width:100%;        
+        margin-bottom:120px !important;
+    }
+    #wedo div:last-child{
+        margin-bottom:50px !important;
+    }
+    .features {
+        padding: 10px 0px 25px 0px;
+    }
+    .features h2 {
+        margin-bottom: 15px;
+    }
+    #team-list > div {
+        margin-bottom: 15px;
+    }
+    .stayin {
+        padding: 10px 0px 0px 0px;
+    }
+    .stayin #map {
+        top: 60px;
+    }
+    .stayin > .container > div h3 {
+        margin: 375px 0px 20px 0px;
+    }
+    .stayin > .container > div > div > p:last-of-type {
+        margin-bottom: 25px;
+    }
+}
+@media screen and (max-width:333px)
+{
+    .slider .container {
+        padding: 30px 15px 5px 15px;
+    }
+    .slider .container h2 {
+        font-size: 22px;
+    }
+    .slider p {       
+        margin-top: 10px;
+    }
+    .slider .container div div a {
+        margin-top:15px;
+        height: 35px;
+        line-height: 33px;        
+        padding: 0px 10px;
+        font-size:13px;
+    }
+    .slider ul {
+        margin-top:18px;
+    }
+    .about {
+        padding: 10px 0px 30px 0px;
+    }
+    .about ul li a {        
+        width: 50px;
+        height: 50px;
+    }
+    .about ul li:nth-child(1) a {
+        background-position: 60% -96px;
+    }
+    .about ul li:nth-child(2) a {
+        background-position: 54% 2px;
+    }
+    .about ul li:nth-child(3) a {
+        background-position: 60% -479px;
+    }
+    .about ul li:nth-child(4) a {
+        background-position: 49% -569px;
+    }
+    .about ul li:nth-child(5) a {
+        background-position: 50% -287px;
+    }    
+    .about h2 {
+        margin-bottom: 10px;
+    }
+    .team {
+        margin: 10px 0px 25px 0px;
+    }
+    .team h2 {
+        margin-bottom: 15px;
+    }
+    .lovely-work {
+        padding: 10px 0px 30px 0px;
+    }
+    .lovely-work h2 {
+        margin-bottom: 15px;
+    }
+    #love-list > div {
+        float: none;
+        margin: 0px 0px 15px 0px;
+    }
+    .whatwedo h2 {
+        margin: 10px 0px 115px 0px;
+    }
+    #wedo div:nth-child(n + 7)
+    {
+        margin-bottom: unset;
+    }
+}
+@media screen and (max-width:320px)
+{
+    footer p {
+        margin:10px auto;
+        display:inline-block;
+        line-height:22px;
+    }
 }
