@@ -631,7 +631,7 @@ footer ul li{
     margin-left:10px;  
 }
 footer ul li:first-child{
-    margin-left:px;
+    margin-left:0px;
 }
 footer ul li a{
     display:inline-block;
@@ -654,6 +654,16 @@ footer ul li:nth-child(4) a{
 footer ul li:nth-child(5) a{
     background-position:5px -168px;
 }
+@media screen and (max-width:1138px)
+{
+    .about > .container > div > div{
+        width: calc((100% - 30px) / 2);
+        margin-right:30px;
+    }
+    .about > .container > div > div:last-child{
+        margin-right:0px;
+    }
+}
 @media screen and (max-width:960px)
 {
     header ul li {
@@ -670,14 +680,7 @@ footer ul li:nth-child(5) a{
     }
     .about h2 {
         margin-bottom: 35px;
-    }
-    .about > .container > div > div{
-        width: calc((100% - 30px) / 2);
-        margin-right:30px;
-    }
-    .about > .container > div > div:last-child{
-        margin-right:0px;
-    }
+    }    
     .team {
         margin: 30px 0px 30px 0px;
     }
@@ -726,13 +729,19 @@ footer ul li:nth-child(5) a{
     .stayin > .container > div > div,
     .contactForm {
         max-width: 50%;
+    }    
+}
+@media screen and (max-width:862px)
+{
+    #wedo > div > h3 {
+        font-size: 13px;
     }
 }
 @media screen and (max-width:786px)
 {
     #team-list > div > div:last-child {        
         padding: 10px 0px 0px 10px;
-    }
+    }    
 }
 @media screen and (max-width:768px)
 {
@@ -807,9 +816,9 @@ footer ul li:nth-child(5) a{
     .whatwedo h2 {
         margin: 25px 0px 115px 0px;
     }
-    #wedo > div > h3 {     
+    /* #wedo > div > h3 {     
         font-size: 14px;
-    }
+    } */
     .features {
         padding: 25px 0px 25px 0px;
     }
@@ -837,6 +846,12 @@ footer ul li:nth-child(5) a{
         margin-top:0px;
     }    
 }
+/* @media screen and (max-width:731px)
+{
+    #wedo > div > h3 {
+        font-size: 13px;
+    }
+} */
 @media screen and (max-width:690px)
 {    
     .slider .container {
