@@ -654,7 +654,7 @@ footer ul li:nth-child(4) a{
 footer ul li:nth-child(5) a{
     background-position:5px -168px;
 }
-@media screen and (max-width:1138px)
+@media screen and (max-width:1139px)
 {
     .about > .container > div > div{
         width: calc((100% - 30px) / 2);
