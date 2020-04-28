@@ -813,6 +813,13 @@ footer ul li:nth-child(5) a{
     #team-list > div > div:last-child {
         height: auto;
     }
+    #team-list ul {
+        position: absolute;
+        display: inline-block;
+        left: calc(50% - 91px / 2);
+        bottom: 5px;
+        top: auto;
+    }
     .whatwedo h2 {
         margin: 25px 0px 115px 0px;
     }
@@ -845,6 +852,28 @@ footer ul li:nth-child(5) a{
     .contactForm label:fist-child{
         margin-top:0px;
     }    
+    #team-list ul li a {        
+        width: 30px;
+        height: 30px;
+        bottom: 0px;
+        /* border-radius:50%; */
+    }
+    #team-list ul {
+        position:absolute;
+        display: inline-block;        
+        left: calc(50% - 91px / 2);
+        /* bottom: 10px;
+        top:auto; */
+    }
+    #team-list ul li:nth-child(1) a {
+        background-position: 54% -2px;
+    }
+    #team-list ul li:nth-child(2) a {
+        background-position: 60% -74px;
+    }
+    #team-list ul li:nth-child(3) a {
+        background-position: 60% -150px;
+    }
 }
 /* @media screen and (max-width:731px)
 {
@@ -983,6 +1012,17 @@ footer ul li:nth-child(5) a{
     }
     .stayin > .container > div > div > p:last-of-type {
         margin-bottom: 25px;
+    }
+    #love-list > div > a::before {
+        display:block;
+        left:auto;
+        top:auto;     
+        right: 0px;
+        bottom: 12px;
+        z-index: 99999;
+    }
+    #love-list h3{
+        display:block;
     }
 }
 @media screen and (max-width:333px)
