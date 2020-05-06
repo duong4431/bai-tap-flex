@@ -5,6 +5,22 @@ class ElementPlus{
         this.label = label;
         this.minWidth = minWidth;
     }    
+    createElement(tagName, className = '', content = '')
+    {        
+        var tag = document.createElement(tagName)
+        if(className != ''){
+            if (className.indexOf(',') != -1)
+                {
+                    var arrClass = className.split(',');
+                    arrClass.forEach(item => tag.classList.add(item));
+                }
+            else
+                tag.classList.add(className);
+        }
+        if(content != '')            
+            tag.innerHTML = content;
+        return tag;
+    }
 }
 
 class SelecBox extends ElementPlus
@@ -17,10 +33,8 @@ class SelecBox extends ElementPlus
         this.selectBox = document.getElementById(id);          
 
         //Tạo nhãn cho selecBox
-        this.selectedItem = document.createElement("span");
-        this.selectedItem.style.minWidth = minWidth;
-        this.selectedItem.setAttribute('class','selectBoxLabel');
-        this.selectedItem.innerHTML = label;
+        this.selectedItem = this.createElement('span','selectBoxLabel',label);
+        this.selectedItem.style.minWidth = minWidth; 
         var selectedValue = document.createAttribute('dataValue');
         selectedValue.value = -1;
         this.selectedItem.setAttributeNode(selectedValue);
@@ -78,18 +92,15 @@ class Tab extends ElementPlus{
         this.tabPlus = document.getElementById(id); 
         this.tabPlus.style.minWidth = minWidth;       
 
-        this.ulTablabel = document.createElement("ul");
-        this.ulTablabel.classList.add('tabLabels');                
+        this.ulTablabel = this.createElement('ul','tabLabels');               
         
-        this.tabContent = document.createElement("div");
-        this.tabContent.classList.add('tabContent');        
+        this.tabContent = this.createElement('div','tabContent');        
 
         //Tạo các tab label
         var countLabel = 0;
         this.arrTabLabel.forEach(item => {
             countLabel++;
-            var h3 = document.createElement("h3");
-            h3.innerHTML = item;
+            var h3 = this.createElement('h3','',item);            
             var li = document.createElement("li");
             var dataIndex = document.createAttribute('dataIndex');
             dataIndex.value = countLabel;
@@ -104,8 +115,7 @@ class Tab extends ElementPlus{
         var countDiv = 0;
         this.arrContent.forEach(content => {
             countDiv++;
-            var div = document.createElement("div");
-            div.innerHTML = content;
+            var div = this.createElement('div','',content);            
             var dataIndex = document.createAttribute('dataIndex');
             dataIndex.value = countDiv;
             div.setAttributeNode(dataIndex);
@@ -142,13 +152,65 @@ class Tab extends ElementPlus{
                     tabLabel.parentElement.classList.remove('active');
                 else
                     tabLabel.parentElement.classList.add('active');
-                //active tabconent vừa được click
-
             });
         })
     }
 }
 
+class Modal extends ElementPlus{    
+    constructor(id,label,minWidth,modalContent) 
+    {
+        super(id,label,minWidth);
+        this.Modal = document.getElementById(id);
+
+        this.Modal.appendChild(this.createElement('div','modal-dialog',''));
+        this.Modal.querySelector('div > div.modal-dialog').appendChild(this.createElement('div','modalTaskBar',''));        
+
+        this.ModalLabel = this.createElement('h5','',label);        
+        this.Modal.querySelector('div > div > div.modalTaskBar').appendChild(this.ModalLabel);
+
+        this.CloseModal = this.createElement('button','closeModal','');
+        this.CloseModal.addEventListener('click', () => {
+            if(this.Modal.classList.contains('opened'))
+            {
+                this.Modal.classList.add('closed');               
+                this.Modal.classList.remove('opened');
+            }
+        })        
+        this.Modal.querySelector('div > div > div.modalTaskBar').appendChild(this.CloseModal);
+
+        this.ModalContent = this.createElement('div','modalContent',modalContent);
+        this.ModalContent.innerHTML = modalContent;
+
+        this.ModalFooter = this.createElement('div','modalFooter','');
+        this.btnClose = this.createElement('button',"btn,btnClose","Close");        
+        this.btnClose.addEventListener('click', () => {
+            if(this.Modal.classList.contains('opened'))
+            {
+                this.Modal.classList.add('closed');
+                this.Modal.classList.remove('opened');
+            }
+        })
+        this.btnSave = this.createElement('button',"btn,btnSave","Save");
+        this.btnSave.addEventListener('click', () => {
+            alert('Success!!!');
+        })
+
+        this.ModalFooter.appendChild(this.btnClose);
+        this.ModalFooter.appendChild(this.btnSave);
+
+        this.Modal.querySelector('div > div.modal-dialog').appendChild(this.ModalContent);
+        this.Modal.querySelector('div > div.modal-dialog').appendChild(this.ModalFooter);
+        console.log(this.Modal);
+    }
+    Show()
+    {
+        if(this.Modal.classList.contains('closed')){
+            this.Modal.classList.add('opened');
+            this.Modal.classList.remove('closed');
+        }
+    }
+}
 // demo select box
 var listTinhThanh = [
     {id:1, name:"Hà Nội"},
@@ -174,3 +236,11 @@ var arrContent = [
     "<h4>3. Thêm hai tỉnh cho phép tắm biển</h4><p>3...Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim quisquam porro est itaque totam quo dolor optio saepe deserunt necessitatibus! Delectus ipsa alias recusandae rerum. Dolorum ipsam architecto dignissimos tenetur eius, in eaque minima blanditiis adipisci molestias dolore doloribus eos, nulla praesentium enim animi, alias illum. Nisi obcaecati corporis omnis?</p> <a href='#' class='btnViewMore'>View more</a>"
 ]
 var tabTinTuc = new Tab("tabTinTuc","",600,arrTabLabel,arrContent);
+
+//demo modal
+var modalContent = "<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus libero exercitationem temporibus, eveniet deserunt maxime, vel eum in amet aliquam animi ipsum? Eligendi provident eveniet aliquam consectetur aliquid fuga magnam quam mollitia saepe maxime necessitatibus tempora possimus alias corporis natus, molestias earum cum id quibusdam quaerat. Quam ab consectetur dignissimos.</p>";
+var modalDemo = new Modal("modal1","Modal Title",600,modalContent);
+function showModal()
+{
+    modalDemo.Show();
+}
